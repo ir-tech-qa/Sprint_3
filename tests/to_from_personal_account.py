@@ -26,8 +26,8 @@ class TestToFromAccount:
         driver.find_element(*TestLocators.SEARCH_ACCOUNT_PROFILE).click()
         driver.find_element(*TestLocators.SEARCH_CONSTRUCTOR).click()
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located((By.XPATH, './/button[text() = "Оформить заказ"]')))
-        assert driver.find_element(By.XPATH, './/button[text() = "Оформить заказ"]'), "Тест не пройден"
+            expected_conditions.visibility_of_element_located(TestLocators.SEARCH_CHECKOUT))
+        assert driver.find_element(*TestLocators.SEARCH_CHECKOUT), "Тест не пройден"
         driver.quit()
 
     def test_from_account_to_logo(self):
@@ -44,6 +44,6 @@ class TestToFromAccount:
             expected_conditions.visibility_of_element_located(TestLocators.SEARCH_LOGO))
         driver.find_element(*TestLocators.SEARCH_LOGO).click()
         WebDriverWait(driver, 3).until(
-            expected_conditions.visibility_of_element_located((By.XPATH, './/button[text() = "Оформить заказ"]')))
-        assert driver.find_element(By.XPATH, './/button[text() = "Оформить заказ"]'), "Тест не пройден"
+            expected_conditions.visibility_of_element_located(TestLocators.SEARCH_CHECKOUT))
+        assert driver.find_element(*TestLocators.SEARCH_CHECKOUT), "Тест не пройден"
         driver.quit()

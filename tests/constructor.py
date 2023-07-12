@@ -11,14 +11,14 @@ class TestToConstructor:
         driver = webdriver.Chrome(options=chrome_options)
         driver.get('https://stellarburgers.nomoreparties.site/')
         driver.find_element(*TestLocators.SEARCH_FILLINGS).click()
-        assert driver.find_element(By.XPATH, './/h2[text() = "Начинки"]').text =='Начинки'
+        assert driver.find_element(*TestLocators.FILLINGS).text =='Начинки'
         driver.quit()
 
     def test_to_constructor_sauces(self):
         driver = webdriver.Chrome(options=chrome_options)
         driver.get('https://stellarburgers.nomoreparties.site/')
         driver.find_element(*TestLocators.SEARCH_SAUCES).click()
-        assert driver.find_element(By.XPATH, './/h2[text() = "Соусы"]').text =='Соусы'
+        assert driver.find_element(*TestLocators.SAUCES).text =='Соусы'
         driver.quit()
 
     def test_to_constructor_rolls(self):
@@ -26,5 +26,5 @@ class TestToConstructor:
         driver.get('https://stellarburgers.nomoreparties.site/')
         driver.find_element(*TestLocators.SEARCH_SAUCES).click()
         driver.find_element(*TestLocators.SEARCH_ROLLS).click()
-        assert driver.find_element(By.XPATH, './/h2[text() = "Булки"]').text == 'Булки'
+        assert driver.find_element(*TestLocators.ROLLS).text == 'Булки'
         driver.quit()

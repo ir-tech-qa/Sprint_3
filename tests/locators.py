@@ -21,5 +21,8 @@ class TestLocators:
     SEARCH_NAME_REGISTRATION = By.XPATH, './/label[text()="Имя"]/following-sibling::input' # имя при регистрации
     SEARCH_EMAIL_REGISTRATION = By.XPATH, './/label[text()="Email"]/following-sibling::input'  # емейл при регистрации
     SEARCH_BUTTON_REGISTRATION = By.XPATH, '.// button[text() = "Зарегистрироваться"]' # кнопка зарегистрироваться для регистрации
-    PASSWORD = '12345678'
-    NAME_REGISTRATION = 'Светлана'
+    FILLINGS = By.XPATH, './/h2[text() = "Начинки"]' #таб "Начинки"
+    SAUCES = By.XPATH, './/h2[text() = "Соусы"]' #таб "Соусы"
+    ROLLS = By.XPATH, './/h2[text() = "Булки"]' #таб "Булки"
+    LOGIN = By.XPATH, './/h2[text() = "Вход"]' #кнопка входа
+    INCORRECT_PASSWORD = By.XPATH, './/p[text() = "Некорректный пароль"]' #Подсказка "некоррекнтый пароль"
